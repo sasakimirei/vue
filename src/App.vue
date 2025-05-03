@@ -3,7 +3,8 @@
     <active-element
       :topic-title="activeTopic && activeTopic.title"
       :text="activeTopic && activeTopic.fullText"
-    ></active-element>
+    >
+    </active-element>
     <knowledge-base></knowledge-base>
   </div>
 </template>
@@ -35,7 +36,7 @@ export default {
   provide() {
     return {
       topics: this.topics,
-      selectTopic: this.activeTopic,
+      selectTopic: this.activateTopic,
     }
   },
   methods: {
@@ -48,8 +49,8 @@ export default {
       this.topics.push({
         id: 'events',
         title: 'Events',
-        description: 'events are important in Vue',
-        fullText: 'Event allow you to trigger code on demand!',
+        description: 'Events are important in Vue',
+        fullText: 'Events allow you to trigger code on demand!',
       })
     }, 3000)
   },
